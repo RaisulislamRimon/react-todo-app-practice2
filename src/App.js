@@ -1,12 +1,13 @@
 import React from 'react';
 import './style.css';
-import Nav from './components/Home/Nav';
+import Navigation from './components/Home/Navigation';
+import { BrowserRouter } from 'react-router-dom';
 
 export default function App() {
   return (
-    <div>
-      <Nav />
+    <BrowserRouter>
+      <Navigation />
       <h1>Hello World!</h1>
-    </div>
+    </BrowserRouter>
   );
 }

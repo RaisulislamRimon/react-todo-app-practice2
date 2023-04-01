@@ -1,0 +1,58 @@
+.Navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #333;
+  color: #fff;
+}
+
+.Navigation-toggle {
+  display: none;
+  background-color: transparent;
+  color: inherit;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+
+.Navigation-menu {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.Navigation-menu li {
+  margin: 0 1rem;
+}
+
+.Navigation-menu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 768px) {
+  .Navigation-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    right: 0;
+    background-color: #333;
+    padding: 1rem;
+  }
+
+  .Navigation-menu.is-expanded {
+    display: flex;
+  }
+
+  .Navigation-toggle {
+    display: block;
+  }
+
+  .Navigation-menu li {
+    margin: 0.5rem 0;
+  }
+}
